@@ -7,11 +7,12 @@ app = FastAPI()
 
 class Item(BaseModel):
     """ Methodo PUT """
-    name: str 
+    name: str
     price: float
+    # De esta manera idicamos que es opcional
     is_offer: Union[bool, None] = None
 
-
+#################### GET
 
 @app.get('/')
 def read_root():
@@ -46,3 +47,15 @@ def calculadora(operador_1: float, operandor_2: float):
         'suma': operador_1 + operandor_2
         }
 
+####################
+
+#################### PUT
+
+@app.put('/item/{item_id}')
+def update_item(item_id: int, item: Item):
+    """ Update Method PUT """
+    # Indicamos que campos queremos devolver 
+    return {
+        'item_name': item.name, 
+        'item_id': item_id
+    }
