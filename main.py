@@ -1,16 +1,13 @@
-from typing import Union
+# Fast api 
 from fastapi import FastAPI
-from pydantic import BaseModel
+# Tyoing
+from typing import Union
+# models 
+from .models.models import Item
 
 # Create app
 app = FastAPI()
 
-class Item(BaseModel):
-    """ Methodo PUT """
-    name: str
-    price: float
-    # De esta manera idicamos que es opcional
-    is_offer: Union[bool, None] = None
 
 #################### GET
 
