@@ -1,6 +1,3 @@
-# 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
-
-
 """ Typos de datos """
 def get_full_name(first_name, last_name):
     full_name = first_name.title() + ' ' + last_name.title()
@@ -41,3 +38,9 @@ def procees_item( items_t: list[ int, int, int], items_s: set[bytes]):
 def procees_item_dic(price: dict[str, float]):
     for items_name, item_precie in price.items():
         print(items_name, item_precie)
+
+""" Type Union """
+# La variable admite varios tipos de datos
+
+def procees_item_union(items: str | int ):
+    print(items)
