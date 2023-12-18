@@ -18,7 +18,6 @@ def read_root():
         'Hello': 'World',
         }
 
-
 @app.get('/hola')
 def hola_mundo():
     """ Prueba hola mundo """
