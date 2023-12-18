@@ -1,3 +1,6 @@
+# Typing
+from typing import Optional
+
 """ Typos de datos """
 def get_full_name(first_name, last_name):
     full_name = first_name.title() + ' ' + last_name.title()
@@ -44,3 +47,24 @@ def procees_item_dic(price: dict[str, float]):
 
 def procees_item_union(items: str | int ):
     print(items)
+
+""" Type Optional """
+# Si no se asigna un valor devulve lo que le indiquemos 
+
+def say_hi(name: Optional[str] = None):
+
+    if name is not None:
+        return print('Hola {name}')
+    else:
+        return print('Hola Mundo')
+
+
+def say_hi_something(name: str | None = None):
+    
+    if name is not None:    
+        return print('Hola {name}')
+    else:
+        return print('Hola Mundo')
+
+
+
