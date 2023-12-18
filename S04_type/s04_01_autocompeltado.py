@@ -25,7 +25,19 @@ print(gat_name_with_age('Agustin',12))
 
 """ Type List """
 
-def procees_items (items: list[str]):
+def procees_items (items: list[str]) -> str:
     for e in items:
         print(e.title())
-        
+
+
+""" Type set and tuple """
+
+def procees_item( items_t: list[ int, int, int], items_s: set[bytes]):
+    return items_t, items_s
+
+
+""" Type dict """
+
+def procees_item_dic(price: dict[str, float]):
+    for items_name, item_precie in price.items():
+        print(items_name, item_precie)
